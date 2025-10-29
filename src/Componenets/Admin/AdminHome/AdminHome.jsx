@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./AdminHome.css";
 import AddMenProduct from "../AddMenProduct/AddMenProduct";
 import AddWomenProduct from "../AddWomenProduct/AddWomenProduct"
+import MyOrders from "../../MyOrders/MyOrders"
 
 const AdminDashboard = () => {
   const [activeSection, setActiveSection] = useState("Doctors");
@@ -11,24 +12,25 @@ const AdminDashboard = () => {
       case "Doctors":
         return (
           <div className="content-section">
-            <h2 className="section-title">Doctors Management</h2>
-            <p className="section-description">Here you can manage all doctors.</p>
+            <h2 className="section-title">Men Management</h2>
+            <p className="section-description">Here you can manage all Men.</p>
             <AddMenProduct />
           </div>
         );
       case "Reviews":
         return (
           <div className="content-section">
-            <h2 className="section-title">Reviews Management</h2>
-            <p className="section-description">Here you can manage all reviews.</p>
+            <h2 className="section-title">Men Management</h2>
+            <p className="section-description">Here you can manage all Men.</p>
             <AddWomenProduct />
           </div>
         );
       case "Bookings":
         return (
           <div className="content-section">
-            <h2 className="section-title">Appointments</h2>
+            <h2 className="section-title">Orders</h2>
             <p className="section-description">Here you can view and manage bookings.</p>
+            <MyOrders />
           </div>
         );
       default:
@@ -58,7 +60,7 @@ const AdminDashboard = () => {
             className={`sidebar-item ${activeSection === "Bookings" ? "active" : ""}`}
             onClick={() => setActiveSection("Bookings")}
           >
-            kids
+            Myorders
           </li>
         </ul>
       </div>

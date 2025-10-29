@@ -13,6 +13,7 @@ import RegisterHome from "./Componenets/Register/RegisterHome/RegisterHome";
 import ProfileDetails from "./Componenets/Register/ProfileDetails/ProfileDetails";
 import LandingPageHomePage from "./Pages/LandingPageHomePage/LandingPageHomePage";
 import AdminHome from "./Componenets/Admin/AdminHome/AdminHome";
+import NotFound from "./Pages/NotFound/NotFound";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -77,8 +78,9 @@ const App = () => {
           <Route path="/women/product/:id" element={<WomenProductPage />} />
           <Route path="/kids" element={<KidsHomePage />} />
           <Route path="/kids/product/:id" element={<KidsProductPage />} />
+          <Route path="*" element={<NotFound />} />
 
-          <Route path="/Admindashboard" element={<AdminHome />} />
+          <Route path="/Admindashboarddddvv" element={<AdminHome />} />
 
           <Route
             path="/register"
