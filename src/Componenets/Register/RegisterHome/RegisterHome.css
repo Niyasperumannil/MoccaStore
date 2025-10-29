@@ -1,0 +1,143 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #f1f5fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.register-container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.register-card {
+  background-color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.register-card h2 {
+  margin-bottom: 1.5rem;
+  color: #10244b;
+}
+
+.register-card input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.register-card button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #10244b;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-card button:hover {
+  background-color: #1b3a7d;
+}
+
+.message {
+  margin-top: 1rem;
+  color: #ff4d4f;
+}
+
+.success {
+  margin-top: 1rem;
+  background-color: #e6f4ea;
+  color: #2b7a0b;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+/* === Country Code + Phone Input Combo === */
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.country-code {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  width: 90px;
+  margin-top: -15px;
+}
+.phone-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.country-select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  margin-top: -15px;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.message {
+  margin-top: 12px;
+  font-weight: 500;
+  color: #444;
+}
+
+.country-code option {
+  font-size: 1rem;
+}
+
+.phone-input-wrapper input {
+  flex: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 1.5rem;
+  }
+
+  .register-card h2 {
+    font-size: 1.5rem;
+  }
+}

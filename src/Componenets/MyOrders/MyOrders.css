@@ -1,0 +1,88 @@
+.orders-page {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.orders-page h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.loading,
+.error,
+.no-orders {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+.error {
+  color: red;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fafafa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+.order-header {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.order-details p {
+  margin: 6px 0;
+  color: #444;
+}
+
+.status {
+  padding: 3px 8px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.status.created {
+  background-color: #ffeeba;
+  color: #856404;
+}
+
+.status.paid {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.failed {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+@media (max-width: 768px) {
+  .orders-page {
+    padding: 20px;
+  }
+  .order-card {
+    padding: 15px;
+  }
+}

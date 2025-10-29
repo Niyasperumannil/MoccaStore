@@ -1,0 +1,147 @@
+/* Global Reset + Smooth Scroll */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+.footer {
+  width: 100%;
+  background-color: #fff;
+  color: #2c2c2c;
+  padding: 40px 140px;
+  border-top: 1px solid #eee;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.app-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.app-badge {
+  width: 180px;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.app-badge:hover {
+  transform: scale(1.03);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links li {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-links li:hover {
+  color: #000;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-policies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  font-size: 13px;
+  color: #555;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-icons i {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-icons i:hover {
+  color: #000;
+}
+
+/* ----------- Responsive Breakpoints ----------- */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 40px 50px;
+  }
+
+  .footer-container {
+    justify-content: space-around;
+  }
+
+  .app-badge {
+    width: 160px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 25px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-column {
+    margin-bottom: 30px;
+  }
+
+  .footer-policies {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Small Mobile (≤48*

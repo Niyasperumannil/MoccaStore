@@ -1,0 +1,94 @@
+/* Global reset & smooth scroll */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Section styling */
+.brands-section {
+  width: 90%;
+  padding-left: 140px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+}
+
+.brands-title {
+  text-align: left;
+  font-size: 24px;
+  margin-left: 19px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* Swiper container */
+.brands-swiper {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Each slide/card */
+.brand-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.brand-card {
+  width: 180px; /* you may adjust to match exact screenshot width */
+  text-align: center;
+}
+
+.brand-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Navigation arrows styling (default from Swiper, but you can override) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000000;
+}
+
+/* Responsive breakpoints */
+@media screen and (min-width: 1200px) {
+  .brand-card {
+    width: 170px; /* adjust for the 6-card layout */
+  }
+}
+@media screen and (max-width: 767px) {
+    .brands-section {
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+}
+  .brands-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .brand-card {
+    width: 140px;
+  }
+  .brands-swiper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

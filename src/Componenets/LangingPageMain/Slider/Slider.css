@@ -1,0 +1,143 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: white;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  width: 1250px;
+  max-width: 100%;
+  height: 500px;
+  margin: 1px 130px 0px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Slides Wrapper */
+.slides-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Slide */
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Active Slide Animation Right */
+.slide.active.slide-right {
+  animation: slideInRight 1s forwards;
+}
+
+/* Active Slide Animation Left */
+.slide.active.slide-left {
+  animation: slideInLeft 1s forwards;
+}
+
+/* Image Styling */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Arrow Buttons */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #353434;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.3s ease;
+}
+
+/* .arrow:hover {
+  background: rgba(220, 218, 218, 0.6);
+} */
+
+.left-arrow {
+  left: 20px;
+}
+
+.right-arrow {
+  right: 20px;
+}
+
+/* Slide Animations */
+@keyframes slideInRight {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* Desktop widths */
+@media (max-width: 1200px) {
+  .slider-container {
+    width: 1000px;
+    height: 500px;
+    margin-left: -5px;
+    margin-top: 1px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slider-container {
+    width: 800px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    width: 600px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider-container {
+    width: 100%;
+    height: 250px;
+  }
+  .arrow {
+    font-size: 30px;
+    padding: 10px;
+  }
+}

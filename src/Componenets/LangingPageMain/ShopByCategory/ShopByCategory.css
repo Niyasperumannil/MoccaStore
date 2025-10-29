@@ -1,0 +1,147 @@
+/* 🌐 Global Reset + Smooth Scroll */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+/* 🛍️ Section Styling */
+.shop-section {
+  width: 85%;
+  padding: 60px 40px;
+  background-color: #fff;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.shop-title {
+  text-align: left;
+  font-size: 24px;
+  margin-left: 19px;
+  font-weight: bold;
+  color: #333333;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+/* 🧱 Row Layout (4 in one line) */
+.shop-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 25px;
+  overflow-x: auto; /* in case of smaller screens */
+  scrollbar-width: none; /* hide scrollbar in Firefox */
+}
+
+.shop-row::-webkit-scrollbar {
+  display: none; /* hide scrollbar in Chrome */
+}
+
+/* 🏷️ Card Styling */
+.shop-card {
+    
+  position: relative;
+  width: 300px;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.shop-card:hover {
+  transform: scale(1.04);
+}
+
+.shop-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 🔶 Overlay */
+.shop-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 18px 0;
+  background: rgba(182, 74, 24, 0.9);
+  color: #fff;
+  text-align: center;
+}
+
+.shop-overlay h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 600;
+    background: rgba(182, 74, 24, 0.9);
+
+}
+
+.shop-overlay p {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 500;
+    background: rgba(182, 74, 24, 0.9);
+
+}
+
+.shop-overlay button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .shop-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .shop-card {
+    width: 280px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+    .shop-section {
+  width: 100%;
+  padding: 60px 1%;
+  background-color: #fff;
+  text-align: center;
+  margin-left: 1px;
+}
+  .shop-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .shop-card {
+    width: 90%;
+    max-width: 380px;
+    height: 420px;
+  }
+  .shop-title {
+    font-size: 26px;
+  }
+}

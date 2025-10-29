@@ -1,0 +1,99 @@
+/* Main container */
+.loader-container {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff; /* white background */
+  color: #000; /* black letters by default */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  animation: fadeOut 0.8s ease-in-out forwards;
+  animation-delay: 2.8s; /* fade near end of 3s */
+}
+
+/* MOCCA letters animation */
+.mocca-logo {
+  font-size: 4rem;
+  font-weight: 700;
+  display: flex;
+  letter-spacing: 0.3rem;
+}
+
+.letter {
+  opacity: 0.5;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  display: inline-block;
+  animation: wave 1s infinite;
+}
+
+.letter:nth-child(1) {
+  animation-delay: 0s;
+}
+.letter:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.letter:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.letter:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.letter:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+/* Snake/Wave effect */
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.6;
+    color: #000; /* black */
+  }
+  50% {
+    transform: translateY(-15px);
+    opacity: 1;
+    color: #b88b4a; /* mocca gold tone */
+  }
+}
+
+/* Loading text */
+.loading-text {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  animation: blink 1.2s infinite ease-in-out;
+  color: #000; /* black loading text */
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Fade out animation before page switch */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .mocca-logo {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .loading-text {
+    font-size: 1rem;
+  }
+}

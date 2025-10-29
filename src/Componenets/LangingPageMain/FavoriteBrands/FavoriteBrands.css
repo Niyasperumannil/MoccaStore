@@ -1,0 +1,203 @@
+/* ---------- Global Reset + Smooth Scroll ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  color: #10101a;
+  background-color: #fff;
+  line-height: 1.4;
+}
+
+/* ---------- Favourite Brands Section ---------- */
+.fav-brands-section {
+  width: 100%;
+  padding-top: 36px;
+  padding-bottom: 48px;
+  background-color: #ffffff;
+}
+
+.fav-brands-inner {
+  width: 1200px;
+  max-width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fav-brands-title {
+  font-family: "Urbanist", Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  color: #0b203f;
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+/* ---------- Swiper Layout ---------- */
+.brands-swiper-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 6px;
+}
+
+.brands-swiper .swiper-wrapper {
+  align-items: center;
+}
+
+.brand-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+/* ---------- Circular Brand Frames ---------- */
+.brand-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 140px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #f6d32a;
+  box-shadow: 0 18px 26px rgba(14, 37, 77, 0.06), 0 6px 14px rgba(14, 37, 77, 0.04);
+  transition: transform 240ms ease, box-shadow 240ms ease;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.brand-circle:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 28px 40px rgba(14, 37, 77, 0.12),
+    0 10px 24px rgba(14, 37, 77, 0.08);
+}
+
+.brand-img {
+  width: 86px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+/* ---------- Responsive (All PX Units) ---------- */
+
+/* Small Phones */
+@media (max-width: 375px) {
+  .fav-brands-inner {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .brand-slide {
+    height: 120px;
+  }
+  .brand-circle {
+    width: 96px;
+    height: 96px;
+    border-radius: 96px;
+    border-width: 3px;
+  }
+  .brand-img {
+    width: 60px;
+  }
+}
+
+/* Medium Phones */
+@media (min-width: 376px) and (max-width: 575px) {
+  .fav-brands-inner {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .brand-slide {
+    height: 140px;
+  }
+  .brand-circle {
+    width: 108px;
+    height: 108px;
+    border-radius: 108px;
+    border-width: 3px;
+  }
+  .brand-img {
+    width: 68px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+  .fav-brands-inner {
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .brand-slide {
+    height: 160px;
+  }
+  .brand-circle {
+    width: 124px;
+    height: 124px;
+    border-radius: 124px;
+    border-width: 3px;
+  }
+  .brand-img {
+    width: 76px;
+  }
+}
+
+/* Small to Medium Desktops */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .fav-brands-inner {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1100px;
+  }
+  .brand-slide {
+    height: 180px;
+  }
+  .brand-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+    border-width: 4px;
+  }
+  .brand-img {
+    width: 80px;
+  }
+}
+
+/* ---------- Accessibility ---------- */
+.brand-circle:focus-within,
+.brand-circle:focus {
+  outline: 2px solid rgba(246, 211, 42, 0.18);
+  outline-offset: 4px;
+}
+
+.brands-swiper {
+  padding-bottom: 8px;
+}

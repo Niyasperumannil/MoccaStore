@@ -1,0 +1,261 @@
+/* Global Reset & Smooth Scroll */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+/* Root Wrap */
+.men-root__wrap {
+  width: 100%;
+  min-height: 100vh;
+  background: #fafafa;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+/* Header */
+.men-header__bar {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 150px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.men-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.men-header__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.men-header__controls button {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.men-header__controls button:hover {
+  background: #444;
+}
+
+/* Product Grid */
+.men-grid__wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 40px 140px;
+}
+
+/* Product Card */
+.men-card__item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.men-card__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.men-card__image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.men-card__meta {
+  padding: 15px;
+}
+
+.men-card__brand {
+  font-size: 14px;
+  color: #555;
+}
+
+.men-card__title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.men-card__price {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+.men-card__cartbtn {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.men-card__cartbtn:hover {
+  background: #333;
+}
+
+/* Sidebar Filter */
+.men-filter__drawer {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100%;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  transition: left 0.3s ease;
+  z-index: 200;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.men-filter__open {
+  left: 0;
+}
+
+.men-filter__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.men-filter__section {
+  margin-top: 15px;
+}
+
+.men-filter__section-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.men-filter__section-body {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.men-filter__option {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 5px 0;
+  gap: 5px;
+}
+
+.men-filter__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 100;
+}
+
+/* Cart Drawer */
+.men-cart__drawer {
+  position: fixed;
+  right: -350px;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: #fff;
+  transition: right 0.3s ease;
+  z-index: 250;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.men-cart__drawer.open {
+  right: 0;
+}
+
+.men-cart__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.men-cart__item {
+  display: flex;
+  margin: 10px 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.men-cart__item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.men-cart__qty button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+}
+
+.men-cart__checkout {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .men-grid__wrap {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .men-grid__wrap {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .men-header__bar {
+    padding: 15px 20px;
+  }
+
+  .men-card__image {
+    height: 250px;
+  }
+}

@@ -1,0 +1,72 @@
+.admin-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: sans-serif;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.admin-form input,
+.admin-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 8px;
+}
+
+.admin-form input[type="checkbox"] {
+  display: inline;
+  width: auto;
+  margin-right: 5px;
+}
+
+.admin-form button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  width: 240px;
+  border-radius: 6px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.product-card button {
+  margin-right: 0.5rem;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.product-card .delete-btn {
+  background: #c0392b;
+  color: white;
+}
+
+.product-card button:not(.delete-btn) {
+  background: #2980b9;
+  color: white;
+}

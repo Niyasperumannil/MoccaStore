@@ -1,0 +1,69 @@
+/* ===== Global Reset + Smooth Scroll ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== Breadcrumb Container ===== */
+.breadcrumb-container {
+  width: 100%;
+  padding: 25px 150px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  background-color: #fff;
+  color: #555;
+}
+
+.breadcrumb-home {
+  color: #7a7a7a;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-home:hover {
+  color: #000;
+}
+
+.breadcrumb-divider {
+  color: #7a7a7a;
+  font-weight: 300;
+}
+
+.breadcrumb-current {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* ===== Responsive Design ===== */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .breadcrumb-container {
+    padding: 20px 40px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .breadcrumb-container {
+    padding: 18px 25px;
+    font-size: 14px;
+    gap: 8px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .breadcrumb-container {
+    padding: 15px 15px;
+    font-size: 13px;
+    gap: 6px;
+  }
+}
