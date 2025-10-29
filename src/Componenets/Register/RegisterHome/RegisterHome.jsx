@@ -54,7 +54,6 @@ const RegisterHome = ({ onRegisterSuccess }) => {
         localStorage.setItem("userToken", res.data.token);
         localStorage.setItem("phoneNumber", fullPhone);
 
-        // IMPORTANT: do NOT call navigate() here. Call parent callback once.
         if (typeof onRegisterSuccess === "function") {
           onRegisterSuccess();
         }
