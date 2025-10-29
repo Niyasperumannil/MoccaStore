@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './AddmenProduct.css'; // CSS file
+import "./AddMenProduct.css"; 
 
 const API_URL = 'https://backendmocca.onrender.com/api/menproducts';
 
